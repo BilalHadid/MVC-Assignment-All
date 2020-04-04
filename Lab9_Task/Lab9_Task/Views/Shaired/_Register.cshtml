@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Conter/thinkfirst.css"/>
+    <title>Lab Task 9</title>
+</head>
+<body>
+    <div class="outlet">
+        <header>
+            <h1>Register</h1>
+        </header>
+        @using(Html.BeginForm()){ 
+        <div>
+                @Html.Label("User Name : ")
+                @Html.TextBox("Enter Name",null)
+            
+               @Html.Label("Password :")
+                @Html.Password("Password",null)    
+
+               @Html.Label("Again Password")
+                @Html.Password("Againpassword", null)
+
+                @Html.Label("Real Name")
+                @Html.TextBox("Name")
+
+               @Html.Label("Birth date")
+                
+
+                @Html.Label("E-mail")
+
+                @Html.Label("SSN :")
+            
+
+                @Html.Label("Phone")
+                    
+                @Html.Label("Zip Code")
+
+        </div>
+        }
+       
+
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

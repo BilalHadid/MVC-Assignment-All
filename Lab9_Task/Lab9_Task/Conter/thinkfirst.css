@@ -1,0 +1,10 @@
+﻿body {
+}
+.outlet{
+    border:5px solid black;
+    height:300px;
+    width:50%;
+    text-align:center;
+    flex-direction:row;
+
+}
