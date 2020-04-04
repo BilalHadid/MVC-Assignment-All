@@ -1,0 +1,19 @@
+﻿@model Lab9ClassWork.Models.First
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(m=>m.UserName)
+        @Html.TextBoxFor(m=>m.UserName)
+        @Html.ValidationMessageFor(m=>m.UserName)
+    </p>
+
+   
+
+    <input type="submit" name="btn" value="click to save" />
+}
+
