@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Question No.01</h2>
+@{ 
+    var student = (Task3.Controllers.studend)ViewBag.studend;
+    var  Employ= (Task3.Controllers.Employee)ViewBag.Employee;
+}
+<h1>Employee</h1>
+<hr/>
+<h3>Employee ID is : @Employ.emp_id</h3>
+<h3>Employee Name is :@Employ.emp_name</h3>
+<h3>Employee Department is :@Employ.emp_department</h3>
+<h1>Student</h1>
+<hr />
+<h3>Student ID is : @student.std_id</h3>
+<h3>Student Name is : @student.std_name</h3>
+<h3>Student Department is : @student.std_department</h3>
