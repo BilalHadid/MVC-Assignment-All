@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shaired/_MyFirsDBPage.cshtml";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())   
+{
+    <div>
+        @Html.Label("First Number: ")
+        @Html.TextBox("FNumbeer", null)
+    </div>
+    <div>
+        @Html.Label("Secong Number: ")
+        @Html.TextBox("SNumbeer", null)
+    </div>
+    <div>
+        <input type="submit" value="Submit"/>
+
+    </div>
+    <div>
+        <p>Result: @ViewData["result"] </p>
+    </div>
+}

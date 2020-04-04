@@ -1,0 +1,46 @@
+﻿body {
+    margin:0px;
+    padding:0px;
+
+}
+header{
+    height:auto;
+    width:auto;
+    border:1px solid black;
+    text-align:center;
+}
+nav {
+    height: 50px;
+    width: auto;
+    border: 1px solid black;
+    
+}
+    nav .navbar {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        background-color: #333;
+        
+    }
+nav .navbar li{
+    float:left;
+    
+    padding:15px;
+
+}
+    nav .navbar li a {
+        display:block;
+        text-decoration: none;
+        display: block;
+        color: aqua;
+        text-align:center;
+        font-size:25px;
+        padding-right:55px
+    }
+    nav .navbar li a:hover{
+        color:crimson;
+        text-transform:uppercase;
+        text-decoration:underline;
+        transition:0.5s;
+    }

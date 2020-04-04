@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/MyDBSTYLE.css"/>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <h1>Header Section</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About us</a></li>        
+        </ul>
+    </nav>
+    
+    <aside>
+        <ul class="sidebar">
+            <li>Home</li>
+            <li>News</li>
+            <li>Contact</li>
+            <li>About us</li>
+        </ul>
+        <section>
+            <div>
+                @RenderBody()
+            </div>
+        </section>
+        
+    </aside>
+    <footer>
+        <h1>Foooter Sectionx</h1>
+
+
+    </footer>
+    
+</body>
+</html>
