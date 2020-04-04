@@ -1,0 +1,64 @@
+﻿@model LastLab9.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(m => m.username)
+        @Html.TextBoxFor(m => m.username)
+        @Html.ValidationMessageFor(m => m.username)
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.password)
+        @Html.PasswordFor(m => m.password)
+        @Html.ValidationMessageFor(m => m.password)
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.againPassword)
+        @Html.PasswordFor(m => m.againPassword)
+        @Html.ValidationMessageFor(m => m.againPassword)
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.DueDate)
+        @Html.EditorFor(m => m.DueDate)
+        @Html.ValidationMessageFor(m => m.DueDate)
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.SSN)
+        @Html.EditorFor(m => m.SSN)
+        @Html.ValidationMessageFor(m => m.SSN)
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Phone)
+        @Html.EditorFor(m => m.Phone)
+        @Html.ValidationMessageFor(m => m.Phone)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Zip)
+        @Html.EditorFor(m => m.Zip)
+        @Html.ValidationMessageFor(m => m.Zip)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Agreement)
+        @Html.CheckBoxFor(m => m.Agreement)
+        @Html.ValidationMessageFor(m => m.Agreement)
+    </p>
+
+
+
+
+    <input type="submit" name="btn" value="click to save" />
+}
