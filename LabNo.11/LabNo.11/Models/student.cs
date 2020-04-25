@@ -29,11 +29,11 @@ namespace LabNo._11.Models
         [Required(ErrorMessage ="Password must be required")]
         [DataType(DataType.Password)]
         [MaxLength(15,ErrorMessage ="Password exceed"),MinLength(5,ErrorMessage ="Password atleast 5 char long")]
-        public int password { get; set; }
+        public string password { get; set; }
 
         [Required(ErrorMessage = "Confirm Password must be required")]
         [DataType(DataType.Password)]
         [MaxLength(15, ErrorMessage = "Password exceed"), MinLength(5, ErrorMessage = "Password atleast 5 char long")]
-        public int Cpassword { get; set; }
+        public string Cpassword { get; set; }
     }
 }
