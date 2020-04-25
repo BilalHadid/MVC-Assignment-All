@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="labTask11ModelStoreContainer" CdmEntityContainer="labTask11Entities">
+    <EntitySetMapping Name="Friends">
+      <EntityTypeMapping TypeName="labTask11Model.Friend">
+        <MappingFragment StoreEntitySet="Friends">
+          <ScalarProperty Name="Friend_Id" ColumnName="Friend_Id" />
+          <ScalarProperty Name="friend_Name" ColumnName="friend_Name" />
+          <ScalarProperty Name="Friend_place" ColumnName="Friend_place" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
