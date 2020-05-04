@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplication4.Models.Mesage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.msg_Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Signup.sig_username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.msg_Text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Signup.sig_username)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.msg_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.msg_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.msg_id })
+        </td>
+    </tr>
+}
+
+</table>

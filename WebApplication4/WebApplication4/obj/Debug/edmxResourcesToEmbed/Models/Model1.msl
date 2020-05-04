@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OnlineChatingModelStoreContainer" CdmEntityContainer="OnlineChatingEntities">
+    <EntitySetMapping Name="Mesages">
+      <EntityTypeMapping TypeName="OnlineChatingModel.Mesage">
+        <MappingFragment StoreEntitySet="Mesages">
+          <ScalarProperty Name="msg_id" ColumnName="msg_id" />
+          <ScalarProperty Name="msg_Signup" ColumnName="msg_Signup" />
+          <ScalarProperty Name="msg_Text" ColumnName="msg_Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Signups">
+      <EntityTypeMapping TypeName="OnlineChatingModel.Signup">
+        <MappingFragment StoreEntitySet="Signup">
+          <ScalarProperty Name="sig_id" ColumnName="sig_id" />
+          <ScalarProperty Name="sig_username" ColumnName="sig_username" />
+          <ScalarProperty Name="sig_Name" ColumnName="sig_Name" />
+          <ScalarProperty Name="sig_fname" ColumnName="sig_fname" />
+          <ScalarProperty Name="sig_Gender" ColumnName="sig_Gender" />
+          <ScalarProperty Name="sig_Email" ColumnName="sig_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

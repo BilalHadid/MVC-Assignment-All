@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectWorkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="loginForm">
+    <Key>
+      <PropertyRef Name="Log_id" />
+    </Key>
+    <Property Name="Log_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="MEsaages" Relationship="Self.FK__MEsaages__UserNa__15502E78" FromRole="loginForm" ToRole="MEsaages" />
+  </EntityType>
+  <EntityType Name="MEsaage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="Int32" />
+    <Property Name="texts" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="whens" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="loginForm" Relationship="Self.FK__MEsaages__UserNa__15502E78" FromRole="MEsaages" ToRole="loginForm" />
+  </EntityType>
+  <Association Name="FK__MEsaages__UserNa__15502E78">
+    <End Role="loginForm" Type="Self.loginForm" Multiplicity="0..1" />
+    <End Role="MEsaages" Type="Self.MEsaage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginForm">
+        <PropertyRef Name="Log_id" />
+      </Principal>
+      <Dependent Role="MEsaages">
+        <PropertyRef Name="UserName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProjectWorkEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="loginForms" EntityType="Self.loginForm" />
+    <EntitySet Name="MEsaages" EntityType="Self.MEsaage" />
+    <AssociationSet Name="FK__MEsaages__UserNa__15502E78" Association="Self.FK__MEsaages__UserNa__15502E78">
+      <End Role="loginForm" EntitySet="loginForms" />
+      <End Role="MEsaages" EntitySet="MEsaages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

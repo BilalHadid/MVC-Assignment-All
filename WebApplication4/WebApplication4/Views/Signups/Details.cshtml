@@ -1,0 +1,60 @@
+﻿@model WebApplication4.Models.Signup
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Signup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Plx</label>
+            @Html.DisplayNameFor(model => model.sig_username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_fname)
+        </dt>
+
+        <dd>
+            <label>Hello</label>
+            @Html.DisplayFor(model => model.sig_fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sig_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

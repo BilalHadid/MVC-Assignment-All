@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectWorkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="loginForm">
+    <Key>
+      <PropertyRef Name="Log_id" />
+    </Key>
+    <Property Name="Log_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pass" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MEsaages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="int" />
+    <Property Name="texts" Type="nvarchar" MaxLength="100" />
+    <Property Name="whens" Type="date" />
+  </EntityType>
+  <Association Name="FK__MEsaages__UserNa__15502E78">
+    <End Role="loginForm" Type="Self.loginForm" Multiplicity="0..1" />
+    <End Role="MEsaages" Type="Self.MEsaages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginForm">
+        <PropertyRef Name="Log_id" />
+      </Principal>
+      <Dependent Role="MEsaages">
+        <PropertyRef Name="UserName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProjectWorkModelStoreContainer">
+    <EntitySet Name="loginForm" EntityType="Self.loginForm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MEsaages" EntityType="Self.MEsaages" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__MEsaages__UserNa__15502E78" Association="Self.FK__MEsaages__UserNa__15502E78">
+      <End Role="loginForm" EntitySet="loginForm" />
+      <End Role="MEsaages" EntitySet="MEsaages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,64 @@
+﻿@model WebApplication4.Models.Signup
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Signup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sig_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sig_Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

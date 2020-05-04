@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebApplication4.Models.Signup>
+
+@{
+    ViewBag.Title = "SignUp Form";
+}
+<link rel="stylesheet" href="~/Content/Site.css" />
+<h2>Index</h2>
+
+<p class="Hellos">
+    <button class="btn-danger" style="color:white;" id="hell">@Html.ActionLink("Registration", "Create")</button>
+    
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sig_username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sig_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sig_fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sig_Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sig_Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sig_username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sig_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sig_fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sig_Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sig_Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sig_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sig_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sig_id })
+        </td>
+    </tr>
+}
+
+</table>
