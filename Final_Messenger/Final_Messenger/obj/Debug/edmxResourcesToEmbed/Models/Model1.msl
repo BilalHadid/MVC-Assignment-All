@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MesengerModelStoreContainer" CdmEntityContainer="MesengerEntities">
+    <EntitySetMapping Name="conversation_reply">
+      <EntityTypeMapping TypeName="MesengerModel.conversation_reply">
+        <MappingFragment StoreEntitySet="conversation_reply">
+          <ScalarProperty Name="cr_id" ColumnName="cr_id" />
+          <ScalarProperty Name="reply" ColumnName="reply" />
+          <ScalarProperty Name="user_id_fk" ColumnName="user_id_fk" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="times" ColumnName="times" />
+          <ScalarProperty Name="c_id_fk" ColumnName="c_id_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conversations">
+      <EntityTypeMapping TypeName="MesengerModel.conversation">
+        <MappingFragment StoreEntitySet="conversations">
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="user_one" ColumnName="user_one" />
+          <ScalarProperty Name="user_two" ColumnName="user_two" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="times" ColumnName="times" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="MesengerModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

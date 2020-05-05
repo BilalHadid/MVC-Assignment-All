@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b9d8bee6e6294a2682fd5bdfcfcc4f09" Name="Diagram1">
+        <EntityTypeShape EntityType="MesengerModel.conversation_reply" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MesengerModel.conversation" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MesengerModel.user" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="MesengerModel.FK__conversat__c_id___1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="MesengerModel.FK__conversat__user___1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="MesengerModel.FK__conversat__user___15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="MesengerModel.FK__conversat__user___164452B1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

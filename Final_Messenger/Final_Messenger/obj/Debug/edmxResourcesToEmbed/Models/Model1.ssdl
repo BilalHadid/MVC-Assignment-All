@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MesengerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="conversation_reply">
+    <Key>
+      <PropertyRef Name="cr_id" />
+    </Key>
+    <Property Name="cr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reply" Type="text" />
+    <Property Name="user_id_fk" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="times" Type="int" Nullable="false" />
+    <Property Name="c_id_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="conversations">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_one" Type="int" Nullable="false" />
+    <Property Name="user_two" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="30" />
+    <Property Name="times" Type="int" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__conversat__c_id___1A14E395">
+    <End Role="conversations" Type="Self.conversations" Multiplicity="1" />
+    <End Role="conversation_reply" Type="Self.conversation_reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="conversations">
+        <PropertyRef Name="c_id" />
+      </Principal>
+      <Dependent Role="conversation_reply">
+        <PropertyRef Name="c_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__conversat__user___15502E78">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="conversations" Type="Self.conversations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="conversations">
+        <PropertyRef Name="user_one" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__conversat__user___164452B1">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="conversations" Type="Self.conversations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="conversations">
+        <PropertyRef Name="user_two" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__conversat__user___1920BF5C">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="conversation_reply" Type="Self.conversation_reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="conversation_reply">
+        <PropertyRef Name="user_id_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MesengerModelStoreContainer">
+    <EntitySet Name="conversation_reply" EntityType="Self.conversation_reply" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="conversations" EntityType="Self.conversations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__conversat__c_id___1A14E395" Association="Self.FK__conversat__c_id___1A14E395">
+      <End Role="conversations" EntitySet="conversations" />
+      <End Role="conversation_reply" EntitySet="conversation_reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK__conversat__user___15502E78" Association="Self.FK__conversat__user___15502E78">
+      <End Role="users" EntitySet="users" />
+      <End Role="conversations" EntitySet="conversations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__conversat__user___164452B1" Association="Self.FK__conversat__user___164452B1">
+      <End Role="users" EntitySet="users" />
+      <End Role="conversations" EntitySet="conversations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__conversat__user___1920BF5C" Association="Self.FK__conversat__user___1920BF5C">
+      <End Role="users" EntitySet="users" />
+      <End Role="conversation_reply" EntitySet="conversation_reply" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

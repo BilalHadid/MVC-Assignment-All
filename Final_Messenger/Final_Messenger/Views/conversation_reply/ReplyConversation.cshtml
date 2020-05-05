@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "ReplyConversation";
+}
+
+<!-- title -->
+<h1>
+    <span>V</span>alidator
+    <span>S</span>ignup
+    <span>F</span>orm
+</h1>
+<!-- //title -->
+<!-- content -->
+<div class="sub-main-w3">
+    <form validate="true" action="#" method="post">
+        <div class="form-group">
+            <label for="exampleInputText">Reply message</label>
+            <input type="text" class="form-control" name="reply" id="exampleInputText" placeholder="Enter Name" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">User id</label>
+            <input type="number" class="form-control" name="user_id_fk" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleMobile1">Ip</label>
+            <input type="text" class="form-control" name="ip" id="exampleMobile1" placeholder="Mobile number" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Times</label>
+            <input maxlength="10" minlength="3" type="number" name="times" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                   required>
+        </div>
+        <div class="form-group">
+            <label for="exampleMobile1">C_id</label>
+            <input type="text" class="form-control" name="c_id_fk" id="exampleMobile1" placeholder="Mobile number" required>
+        </div>
+        
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" value="true" required>I agree to the terms and conditions
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<!-- //content -->
+<!-- copyright -->
+<div class="footer">
+    <p>
+        &copy; 2018 Validator Signup Form. All rights reserved | Design by
+        <a href="http://w3layouts.com">W3layouts</a>
+    </p>
+</div>
+<!-- //copyright -->
+<!-- Jquery -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //Jquery -->
+<!-- Jquery -->
+<script src="js/jquery-simple-validator.min.js"></script>
+<!-- //Jquery -->
+
+

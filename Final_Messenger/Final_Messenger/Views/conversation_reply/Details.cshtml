@@ -1,0 +1,58 @@
+﻿@model Final_Messenger.Models.conversation_reply
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>conversation_reply</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.reply)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reply)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.times)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.times)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.conversation.ip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.conversation.ip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cr_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

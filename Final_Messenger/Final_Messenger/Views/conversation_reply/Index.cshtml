@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Final_Messenger.Models.conversation_reply>
+
+@{
+    ViewBag.Title = "Conversation Reply";
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<h2>Conversation Reply</h2>
+
+<p>
+    <button class="btn-danger" style="color:white;">@Html.ActionLink("Create New", "Create")</button>
+   
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <div class="form-group">
+                <label for="exampleInputText">Reply message</label>
+                @Html.DisplayNameFor(model => model.reply)
+            </div>
+           
+        </th>
+        <th>
+            <div class="form-group">
+                <label for="exampleInputEmail1">User id</label>
+                @Html.DisplayNameFor(model => model.ip)
+            </div>
+           
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.times)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.conversation.ip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="back">
+        <td>
+            @Html.DisplayFor(modelItem => item.reply)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.times)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.conversation.ip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.user.username)
+        </td>
+        <td class="back">
+            @Html.ActionLink("Edit", "Edit", new { id=item.cr_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cr_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cr_id })
+        </td>
+    </tr>
+}
+
+</table>
