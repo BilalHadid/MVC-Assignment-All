@@ -1,0 +1,161 @@
+Rule of Inferencing :
+-------------------
+
+
+A. Reflexitivity :
+
+   -------------
+if B is a subset of A i.e. A -> B, then A -> A holds
+std_id,std_name -> std_name
+std_id -> std_id
+std_name -> std_name
+
+B. Augmentation :
+   ------------
+
+if A -> B, then AC -> BC
+
+std_id -> std_name, ye FD hay
+std_id,std_add -> std_name,std_add , abh bhi ye FD rahay ge
+
+C. Transitivity :
+   ------------
+
+if A -> B and B -> C, then A -> C
+a=b
+b=c
+a=c
+
+std_id -> std_name
+std_name -> std_add
+
+std_id -> std_add
+
+D. Additivity or Union :
+   -------------------
+
+if A -> B and A -> C, then A -> BC
+std_id -> std_name
+std_id -> std_add
+std_id -> std_name, std_add
+
+E. Projectivity or Decomposition :
+   -----------------------------
+
+if A -> BC, then A -> B and A -> C
+std_id -> std_name, std_add
+std_id -> std_name
+std_id -> std_add
+
+F. Pseudo Transitivity :
+   -------------------
+
+if A -> B and CB -> D , then AC -> D
+
+std_id -> std_name
+std_name, std_add -> std_age
+std_id, std_add -> std_age
+
+
+3NF:
+===
+
+- koye bhi non key attribute kisi bhi non key attribute per dependent na ho
+- transitivity dependency na ho
+
+student(std_id, std_name, std_add, pr_name, pr_credit)
+        ------
+
+std_id -> std_name
+std_id -> std_add
+std_id -> pr_name
+std_id -> pr_credit
+
+pr_name -> pr_credit
+
+CS		44
+BBA		44
+EE		40
+MTHS		40
+ENG		36
+
+Student(std_id, std_name, std_add)
+        ------
+Program(pr_name, pr_credit)
+        -------
+
+another example of 3NF:
+----------------------
+
+Vendor( v_id, v_name, v_account_no, v_bank_code, v_bank_name)
+        ----
+v_id -> v_name
+v_id -> V_account_no
+v_id -> v_bank_code
+v_id -> v_bank_name
+
+v_bank_code -> v_bank_name
+
+b001		habib
+b002		mcb
+b003		meezan
+
+Vendor( v_id, v_name, v_account_no,bank_code(FK))
+bank(bank_code, bank_name)
+     ---------
+
+BCNF, Boyce Code Normal Form:
+----------------------------
+
+-table mein jitni bhi FD's hein sab FD ka left hand side wala attribe (may or may not be composite) candidate key honi chaheyye
+-agar table BCNF mein aa gaya to table 3NF mein bhi aa chuka
+-laikin agar table BCNF mein nahein hay to 3NF mein bhi nahein ho ga
+-BCNF hamein kab kab check kerna parray ga
+	* agar relation mein composite candidate keys hon
+	* relation mein aik say zada candidate keys hon
+        * candidate keys disjoint hon, yani candidate keys mein kuch attributes           common hon - yani pehli candidate key ka sub attribute kisi dusri candidate key ka sub attribute ho 
+a,b
+a,c
+
+-agar relation pseudo transitivity aa rahi tab bhi relation BCNF mein nahein ho ga
+
+candidate key : agar key single attribute hay to wo lazmi candidaye bhi hay, or key composite key  hay, to key ka koye bhi sub attribute akailay kisi bhi attribute ko uniquely identify na ker raha ho
+
+FAll_2020_BSCS_9425 -> std_name
+
+Term_year_prname_id -> std_name
+
+composite key : do ya do say zada attribute per mushtamil key
+
+enroll( Std_id,C_id, Std_name, C_name, date_of_enroll)
+        -----------
+std_id, C_id
+std_id, C_name
+
+std_id -> c_name
+1		dbms
+1		oop
+
+c_id -> std_name
+1	mohsin
+1	mishael
+
+c_name -> std_name
+dbms		mohsin
+dbms		mishael
+
+-enroll ka table 3NF mein hay q k koye bhi non key attribute kisi non key attribute per dependent nahein hay, yani transitivity nahein aa rahi hay
+
+student(std_id, std_name)
+course(c_id, c_name)
+enroll(std_id, c_id, date_of_enroll)
+
+
+
+
+
+
+
+
+
+

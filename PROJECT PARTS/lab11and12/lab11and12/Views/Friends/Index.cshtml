@@ -1,0 +1,39 @@
+﻿@model IEnumerable<lab11and12.Models.Friend>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.friend_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Friend_place)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.friend_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Friend_place)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Friend_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Friend_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Friend_Id })
+        </td>
+    </tr>
+}
+
+</table>

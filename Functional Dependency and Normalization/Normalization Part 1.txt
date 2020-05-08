@@ -1,0 +1,52 @@
+Functional Dependencies:
+------------------------
+student(std_id, std_name, std_add, std_phone, std_age)
+
+std_id -> std_name --- FD
+1		mohsin
+2		mishael
+3		mohsin
+4		mohsin
+5		talha
+
+std_id -> std_age : FD?
+1		25
+2		25
+3		25
+4		26
+5		27
+
+std_id -> std_phone : FD?
+1		123,456
+2		134
+3		789
+4		478,321,876
+5		001
+
+std_phone -> std_id : FD?
+123,456		1
+134		2
+789		3
+478,321,876	4
+001		5	
+
+
+left to right -> 
+-std_id ki her value  k saath std_name ki sirf aik value associated honi chaheyye
+-std_id say hm sirf aik std_name ko determine ker sakein
+
+FD ko left to right aisay parrhein gay k std_id determine std_name
+
+
+right to left ->
+-std_name k her value k saath std_id ki km say km aik or zada say zada kaye values associated ho sakti hein
+-std_name ki her value say hm std_id ki aik say zada value determine ker saktay hein
+
+FD ko right to left aisay parrhein gay std_name is dependent or functionaly dependent on std_id
+
+Note: FD ka left hand side wala attribute key attribute hona chaheyye
+
+Normalization:
+=============
+
+1NF,2NF,3NF, BCNF,4NF,5NF

@@ -1,0 +1,33 @@
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\csc.exe
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\System.Collections.Immutable.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\System.Reflection.Metadata.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\vbc.exe
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\VBCSCompiler.exe
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\roslyn\VBCSCompiler.exe.config
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\LAB10 WORK.dll.config
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\LAB10 WORK.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\LAB10 WORK.pdb
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\Microsoft.Web.Infrastructure.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Helpers.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Mvc.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Razor.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Webpages.Deployment.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Webpages.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Webpages.Razor.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Razor.xml
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Webpages.xml
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Webpages.Deployment.xml
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Webpages.Razor.xml
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Helpers.xml
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\bin\System.Web.Mvc.xml
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\obj\Debug\LAB10 WORK.csprojResolveAssemblyReference.cache
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\obj\Debug\LAB10 WORK.dll
+D:\PROJECT PARTS\LAB10 WORK\LAB10 WORK\obj\Debug\LAB10 WORK.pdb
